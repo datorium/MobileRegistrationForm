@@ -39,7 +39,7 @@ namespace MobileRegistrationForm
 
             fieldPasswordRepeat.Text = "Repeat Password";
             fieldPasswordRepeat.ForeColor = Color.LightGray;
-            fieldPasswordRepeat.Tag = "Repeat Password";
+            fieldPasswordRepeat.Tag = "Repeat Password";    
         }
 
         private void Field_Enter(object sender, EventArgs e)
@@ -49,6 +49,11 @@ namespace MobileRegistrationForm
             {
                 field.Text = string.Empty;
                 field.ForeColor = Color.Black;
+                if((string)field.Tag == "Password" ||
+                    (string)field.Tag == "Repeat Password")
+                {
+                    field.PasswordChar = '*';
+                }
             }           
         }
 
@@ -59,6 +64,12 @@ namespace MobileRegistrationForm
             {
                 field.Text = (string)field.Tag;
                 field.ForeColor = Color.LightGray;
+                if ((string)field.Tag == "Password" ||
+                    (string)field.Tag == "Repeat Password")
+                {
+                    field.PasswordChar = '\0';
+                }
+
             }
         }
     }
