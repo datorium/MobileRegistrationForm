@@ -42,14 +42,24 @@ namespace MobileRegistrationForm
             fieldPasswordRepeat.Tag = "Repeat Password";
         }
 
-        private void Field_Click(object sender, EventArgs e)
+        private void Field_Enter(object sender, EventArgs e)
         {
             TextBox field = (TextBox)sender;
-            if(field.Text == field.Tag)
+            if(field.Text == (string)field.Tag)
             {
                 field.Text = string.Empty;
                 field.ForeColor = Color.Black;
             }           
+        }
+
+        private void Field_Leave(object sender, EventArgs e)
+        {
+            TextBox field = (TextBox)sender;
+            if(field.Text == string.Empty)
+            {
+                field.Text = (string)field.Tag;
+                field.ForeColor = Color.LightGray;
+            }
         }
     }
 }
