@@ -136,6 +136,7 @@
             this.checkShowPassword.TabIndex = 7;
             this.checkShowPassword.Text = "Show Password";
             this.checkShowPassword.UseVisualStyleBackColor = true;
+            this.checkShowPassword.CheckedChanged += new System.EventHandler(this.checkShowPassword_CheckedChanged);
             // 
             // Form1
             // 
