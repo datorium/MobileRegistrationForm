@@ -33,7 +33,7 @@
             this.fieldEmail = new System.Windows.Forms.TextBox();
             this.fieldPassword = new System.Windows.Forms.TextBox();
             this.fieldAge = new System.Windows.Forms.NumericUpDown();
-            this.fieldPassowordRepeat = new System.Windows.Forms.TextBox();
+            this.fieldPasswordRepeat = new System.Windows.Forms.TextBox();
             this.buttonSignIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fieldAge)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,7 @@
             this.fieldName.Size = new System.Drawing.Size(379, 41);
             this.fieldName.TabIndex = 0;
             this.fieldName.Text = "fieldName";
+            this.fieldName.Click += new System.EventHandler(this.Field_Click);
             // 
             // fieldSurname
             // 
@@ -55,6 +56,7 @@
             this.fieldSurname.Size = new System.Drawing.Size(379, 41);
             this.fieldSurname.TabIndex = 1;
             this.fieldSurname.Text = "fieldSurname";
+            this.fieldSurname.Click += new System.EventHandler(this.Field_Click);
             // 
             // fieldEmail
             // 
@@ -64,6 +66,7 @@
             this.fieldEmail.Size = new System.Drawing.Size(379, 41);
             this.fieldEmail.TabIndex = 2;
             this.fieldEmail.Text = "fieldEmail";
+            this.fieldEmail.Click += new System.EventHandler(this.Field_Click);
             // 
             // fieldPassword
             // 
@@ -73,6 +76,7 @@
             this.fieldPassword.Size = new System.Drawing.Size(379, 41);
             this.fieldPassword.TabIndex = 3;
             this.fieldPassword.Text = "fieldPassword";
+            this.fieldPassword.Click += new System.EventHandler(this.Field_Click);
             // 
             // fieldAge
             // 
@@ -97,14 +101,15 @@
             0,
             0});
             // 
-            // fieldPassowordRepeat
+            // fieldPasswordRepeat
             // 
-            this.fieldPassowordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fieldPassowordRepeat.Location = new System.Drawing.Point(12, 277);
-            this.fieldPassowordRepeat.Name = "fieldPassowordRepeat";
-            this.fieldPassowordRepeat.Size = new System.Drawing.Size(379, 41);
-            this.fieldPassowordRepeat.TabIndex = 5;
-            this.fieldPassowordRepeat.Text = "fieldPasswordRepeat";
+            this.fieldPasswordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fieldPasswordRepeat.Location = new System.Drawing.Point(12, 277);
+            this.fieldPasswordRepeat.Name = "fieldPasswordRepeat";
+            this.fieldPasswordRepeat.Size = new System.Drawing.Size(379, 41);
+            this.fieldPasswordRepeat.TabIndex = 5;
+            this.fieldPasswordRepeat.Text = "fieldPasswordRepeat";
+            this.fieldPasswordRepeat.Click += new System.EventHandler(this.Field_Click);
             // 
             // buttonSignIn
             // 
@@ -122,7 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 510);
             this.Controls.Add(this.buttonSignIn);
-            this.Controls.Add(this.fieldPassowordRepeat);
+            this.Controls.Add(this.fieldPasswordRepeat);
             this.Controls.Add(this.fieldAge);
             this.Controls.Add(this.fieldPassword);
             this.Controls.Add(this.fieldEmail);
@@ -143,7 +148,7 @@
         private System.Windows.Forms.TextBox fieldEmail;
         private System.Windows.Forms.TextBox fieldPassword;
         private System.Windows.Forms.NumericUpDown fieldAge;
-        private System.Windows.Forms.TextBox fieldPassowordRepeat;
+        private System.Windows.Forms.TextBox fieldPasswordRepeat;
         private System.Windows.Forms.Button buttonSignIn;
     }
 }
