@@ -15,6 +15,25 @@ namespace MobileRegistrationForm
         public Form1()
         {
             InitializeComponent();
+            InitializeForm();
+        }
+
+        private void InitializeForm()
+        {
+            fieldName.Text = "Name";
+            fieldName.ForeColor = Color.LightGray;
+
+            fieldSurname.Text = "Surname";
+            fieldSurname.ForeColor = Color.LightGray;
+
+            fieldEmail.Text = "Email";
+            fieldEmail.ForeColor = Color.LightGray;
+
+            fieldPassword.Text = "Password";
+            fieldPassword.ForeColor = Color.LightGray;
+
+            fieldPasswordRepeat.Text = "Password Repeat";
+            fieldPasswordRepeat.ForeColor = Color.LightGray;
         }
     }
 }
