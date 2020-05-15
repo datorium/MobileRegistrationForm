@@ -36,7 +36,7 @@
             this.fieldAge = new System.Windows.Forms.NumericUpDown();
             this.buttonSignUp = new System.Windows.Forms.Button();
             this.checkShowPassword = new System.Windows.Forms.CheckBox();
-            this.registeredUserList = new System.Windows.Forms.ListBox();
+            this.registeredUsersListView = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.fieldAge)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,22 +142,22 @@
             this.checkShowPassword.UseVisualStyleBackColor = true;
             this.checkShowPassword.CheckedChanged += new System.EventHandler(this.checkShowPassword_CheckedChanged);
             // 
-            // registeredUserList
+            // registeredUsersListView
             // 
-            this.registeredUserList.FormattingEnabled = true;
-            this.registeredUserList.ItemHeight = 16;
-            this.registeredUserList.Location = new System.Drawing.Point(426, 12);
-            this.registeredUserList.MultiColumn = true;
-            this.registeredUserList.Name = "registeredUserList";
-            this.registeredUserList.Size = new System.Drawing.Size(511, 484);
-            this.registeredUserList.TabIndex = 8;
+            this.registeredUsersListView.HideSelection = false;
+            this.registeredUsersListView.Location = new System.Drawing.Point(411, 12);
+            this.registeredUsersListView.Name = "registeredUsersListView";
+            this.registeredUsersListView.Size = new System.Drawing.Size(698, 459);
+            this.registeredUsersListView.TabIndex = 9;
+            this.registeredUsersListView.UseCompatibleStateImageBehavior = false;
+            this.registeredUsersListView.View = System.Windows.Forms.View.Details;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 531);
-            this.Controls.Add(this.registeredUserList);
+            this.ClientSize = new System.Drawing.Size(1134, 531);
+            this.Controls.Add(this.registeredUsersListView);
             this.Controls.Add(this.checkShowPassword);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.fieldAge);
@@ -184,7 +184,7 @@
         private System.Windows.Forms.NumericUpDown fieldAge;
         private System.Windows.Forms.Button buttonSignUp;
         private System.Windows.Forms.CheckBox checkShowPassword;
-        private System.Windows.Forms.ListBox registeredUserList;
+        private System.Windows.Forms.ListView registeredUsersListView;
     }
 }
 

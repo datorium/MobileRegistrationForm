@@ -39,6 +39,12 @@ namespace MobileRegistrationForm
             fieldPasswordRepeat.Text = "Password Repeat";
             fieldPasswordRepeat.Tag = "Password Repeat";
             fieldPasswordRepeat.ForeColor = Color.LightGray;
+
+            registeredUsersListView.Columns.Add("Name");
+            registeredUsersListView.Columns.Add("Surname");
+            registeredUsersListView.Columns.Add("Email");
+            registeredUsersListView.Columns.Add("Age");
+            registeredUsersListView.Columns.Add("Password");
         }
 
         private void Field_Enter(object sender, EventArgs e)
@@ -108,7 +114,8 @@ namespace MobileRegistrationForm
                 fieldPasswordRepeat.BackColor = Color.Green;
             }
 
-
+            var item = new ListViewItem(new[] { fieldName.Text, fieldSurname.Text,  fieldEmail.Text, fieldAge.Value.ToString(), fieldPassword.Text});
+            registeredUsersListView.Items.Add(item);
         }
 
         private void Password_TextChanged(object sender, EventArgs e)
