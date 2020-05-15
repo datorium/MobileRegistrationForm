@@ -146,7 +146,8 @@
             // 
             this.registeredUserList.FormattingEnabled = true;
             this.registeredUserList.ItemHeight = 16;
-            this.registeredUserList.Location = new System.Drawing.Point(429, 12);
+            this.registeredUserList.Location = new System.Drawing.Point(426, 12);
+            this.registeredUserList.MultiColumn = true;
             this.registeredUserList.Name = "registeredUserList";
             this.registeredUserList.Size = new System.Drawing.Size(511, 484);
             this.registeredUserList.TabIndex = 8;

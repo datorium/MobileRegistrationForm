@@ -98,8 +98,8 @@ namespace MobileRegistrationForm
             if(fieldPassword.Text != fieldPasswordRepeat.Text)
             {
                 //passwords are not equal
-                fieldPassword.BackColor = Color.Red;
-                fieldPasswordRepeat.BackColor = Color.Red;
+                fieldPassword.BackColor = Color.Salmon;
+                fieldPasswordRepeat.BackColor = Color.Salmon;
                 return;
             }
             else if (fieldPassword.Text == fieldPasswordRepeat.Text)
@@ -108,15 +108,25 @@ namespace MobileRegistrationForm
                 fieldPasswordRepeat.BackColor = Color.Green;
             }
 
-            MessageBox.Show("User registered");
+
         }
 
         private void Password_TextChanged(object sender, EventArgs e)
         {
+            if(fieldPassword.Text == (string)fieldPassword.Tag || fieldPasswordRepeat.Text == (string)fieldPasswordRepeat.Tag)
+            {
+                return;
+            }
+            
             if (fieldPassword.Text == fieldPasswordRepeat.Text)
             {
                 fieldPassword.BackColor = Color.LightGreen;
                 fieldPasswordRepeat.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                fieldPassword.BackColor = Color.Salmon;
+                fieldPasswordRepeat.BackColor = Color.Salmon;
             }
         }
     }
