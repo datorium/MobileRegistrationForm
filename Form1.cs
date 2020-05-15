@@ -92,5 +92,32 @@ namespace MobileRegistrationForm
                 }                
             }
         }
+
+        private void buttonSignUp_Click(object sender, EventArgs e)
+        {
+            if(fieldPassword.Text != fieldPasswordRepeat.Text)
+            {
+                //passwords are not equal
+                fieldPassword.BackColor = Color.Red;
+                fieldPasswordRepeat.BackColor = Color.Red;
+                return;
+            }
+            else if (fieldPassword.Text == fieldPasswordRepeat.Text)
+            {
+                fieldPassword.BackColor = Color.Green;
+                fieldPasswordRepeat.BackColor = Color.Green;
+            }
+
+            MessageBox.Show("User registered");
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+            if (fieldPassword.Text == fieldPasswordRepeat.Text)
+            {
+                fieldPassword.BackColor = Color.LightGreen;
+                fieldPasswordRepeat.BackColor = Color.LightGreen;
+            }
+        }
     }
 }

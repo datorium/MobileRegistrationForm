@@ -36,6 +36,7 @@
             this.fieldAge = new System.Windows.Forms.NumericUpDown();
             this.buttonSignUp = new System.Windows.Forms.Button();
             this.checkShowPassword = new System.Windows.Forms.CheckBox();
+            this.registeredUserList = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.fieldAge)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +81,7 @@
             this.fieldPassword.Size = new System.Drawing.Size(370, 41);
             this.fieldPassword.TabIndex = 3;
             this.fieldPassword.Text = "fieldPassword";
+            this.fieldPassword.TextChanged += new System.EventHandler(this.Password_TextChanged);
             this.fieldPassword.Enter += new System.EventHandler(this.Field_Enter);
             this.fieldPassword.Leave += new System.EventHandler(this.Field_Leave);
             // 
@@ -91,6 +93,7 @@
             this.fieldPasswordRepeat.Size = new System.Drawing.Size(370, 41);
             this.fieldPasswordRepeat.TabIndex = 4;
             this.fieldPasswordRepeat.Text = "fieldPasswordRepeat";
+            this.fieldPasswordRepeat.TextChanged += new System.EventHandler(this.Password_TextChanged);
             this.fieldPasswordRepeat.Enter += new System.EventHandler(this.Field_Enter);
             this.fieldPasswordRepeat.Leave += new System.EventHandler(this.Field_Leave);
             // 
@@ -126,6 +129,7 @@
             this.buttonSignUp.TabIndex = 6;
             this.buttonSignUp.Text = "Sign Up";
             this.buttonSignUp.UseVisualStyleBackColor = true;
+            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             // 
             // checkShowPassword
             // 
@@ -138,11 +142,21 @@
             this.checkShowPassword.UseVisualStyleBackColor = true;
             this.checkShowPassword.CheckedChanged += new System.EventHandler(this.checkShowPassword_CheckedChanged);
             // 
+            // registeredUserList
+            // 
+            this.registeredUserList.FormattingEnabled = true;
+            this.registeredUserList.ItemHeight = 16;
+            this.registeredUserList.Location = new System.Drawing.Point(429, 12);
+            this.registeredUserList.Name = "registeredUserList";
+            this.registeredUserList.Size = new System.Drawing.Size(511, 484);
+            this.registeredUserList.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 531);
+            this.ClientSize = new System.Drawing.Size(962, 531);
+            this.Controls.Add(this.registeredUserList);
             this.Controls.Add(this.checkShowPassword);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.fieldAge);
@@ -169,6 +183,7 @@
         private System.Windows.Forms.NumericUpDown fieldAge;
         private System.Windows.Forms.Button buttonSignUp;
         private System.Windows.Forms.CheckBox checkShowPassword;
+        private System.Windows.Forms.ListBox registeredUserList;
     }
 }
 
